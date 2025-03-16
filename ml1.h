@@ -73,8 +73,8 @@
 #define	WIN		0
 #define ZTC             0
 #define ZTCX            0
-#define	FBSD32		1
-#define	FBSD64		0
+#define	FBSD32		0
+#define	FBSD64		1
 
 #if     IBMC | FBSD32 | FBSD64 | MSC | ZTCX | VMS | WIN | ZTC
 #define ANSI            1
