@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Generate name of distribution file
+# Usage: distname stem
+
+awk -f - -v NAME=$1 md.c << 'xyzzy'
+/#define MDVERSION/ { ver = $3 }
+END { printf "%s-%s", NAME, substr(ver,2,length(ver)-2) }
+xyzzy
+

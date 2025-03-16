@@ -1,0 +1,12 @@
+The documentation consists of three documents, and of course the manual
+page (which is the Appendix to the User's Manual).
+
+ml1tut.pdf	- the ML/I Tutorial. New users should read this first.
+ml1sig.pdf	- the ML/I Simple Introductory Guide. This builds on the
+		  Tutorial and should be read next.
+ml1user.pdf	- the ML/I User's Manual. This contains more advanced
+		  examples, and also serves as a reference.
+ml1appy.pdf	- Appendix Y to the ML/I User's Manual. This contains
+		  details specific to the FreeBSD implementation.
+
+Bob Eager bob@eager.cx

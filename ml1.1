@@ -1,0 +1,120 @@
+.Dd September 16,2018
+.Dt ML1 1 CON
+.Os
+.Sh NAME
+.Nm ml1
+.Nd "ML/I macro processor"
+.Sh SYNOPSIS
+.Nm
+.Op Fl v
+.Op Fl w Ar workspace
+.Op Fl o Ar outputfile
+.Op Fl o Ar outputfile
+.Op Fl o Ar outputfile
+.Op Fl o Ar outputfile
+.Op Fl l Ar listingfile
+.Op Fl d Ar debuggingfile
+.Op Ar file
+.Op Ar file
+.Op Ar file
+.Op Ar file
+.Op Ar file
+.Sh DESCRIPTION
+.Nm
+is a general purpose macro processor which allows its users to
+augment any existing programming language by adding new statements (or
+other syntactic forms) of their own choosing and in their own notation.
+These new features must be expandable in terms of the existing language.
+.Pp
+.Nm
+is also useful for systematic editing, i.e. the replacement of one
+string, possibly involving parameters, by another string throughout a
+program or any other piece of text.
+.Pp
+This manual page merely summarises the
+.Nm
+command line options; consult the full ML/I documentation for anything
+else.
+.Pp
+The options are as follows:
+.Bl -tag -width Ds
+.It Fl v
+.It Fl V
+Print the version number of this implementation of
+.Nm .
+.It Fl w Ar n
+.It Fl W Ar n
+Set the amount of workspace available to
+.Nm
+to
+.Ar n
+words (the default is 5000 words).
+.It Fl l Ar file
+.It Fl L Ar file
+Nominate
+.Ar file
+as the listing file. The default is that no listing is produced.
+The name
+.Fl
+is taken to mean the standard output.
+.It Fl d Ar file
+.It Fl D Ar file
+Nominate
+.Ar file
+as the debugging file. By default, this is the standard error stream
+(usually the user's terminal).
+The name
+.Fl
+is taken to mean the standard output.
+.It Fl o Ar file
+.It Fl O Ar file
+Nominate
+.Ar file
+as an output file. Up to four output files may be specified; each must
+be preceded by the
+.Fl o
+flag.
+If no output files are specified, the standard output is used.
+An output file named
+.Fl
+is also taken to be the standard output.
+.El
+.Pp
+All other arguments to
+.Nm
+are taken to be the names of input files; there may be no more than
+five of these.
+If no input file is specified, the standard input is used.
+The name
+.Fl
+is also taken to mean the standard input.
+.Sh DIAGNOSTICS
+.Ex -std ml1
+.Sh SEE ALSO
+.Rs
+.%A "R.D. Eager"
+.%T "An ML/I tutorial"
+.%D "2004"
+.Re
+.Rs
+.%A "R.D. Eager"
+.%A "P.J. Brown"
+.%T "A simple introductory guide to ML/I, Fourth Edition"
+.%D "2004"
+.Re
+.Rs
+.%A "R.D. Eager"
+.%A "P.J. Brown"
+.%T "ML/I User's Manual, Sixth Edition"
+.%D "2004"
+.Re
+.Rs
+.%A "R.D. Eager"
+.%T "ML/I User's Manual, Appendix Y - Implementation on IBM PC under FreeBSD"
+.%D "2004"
+.Re
+.Pp
+All of the above documents are available from the ML/I web site,
+.Aq http://www.ml1.org.uk .
+.Sh AUTHORS
+.An "Bob Eager" Aq rde@ml1.org.uk .
